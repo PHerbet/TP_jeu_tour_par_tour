@@ -12,20 +12,21 @@
 <body id="monApp">
     <div>
         <h1>FFXV</h1>
+        
     </div>
     <div>
         <h4>Méchant</h4>
-        <div class="pv" v-model="pvIa">
+        <div class="pv">
             {{pvIa}}
         </div>
     </div>
     <div>
         <h4>Joueur</h4>
-        <div class="pv" v-model="pvPlayer">
+        <div class="pv">
             {{pvPlayer}}
         </div>
         <div class="button">
-            <button class="btn btn-primary">
+            <button class="btn btn-primary" @click="attackPlayer">
                 Attaque
             </button>
             <button class="btn btn-primary">
@@ -39,6 +40,9 @@
             </button>
         </div>
     </div>
+
+    
+  
     <!-- script pour contacter VUE -->
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>
