@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>FFXV</title>
+    <title>FFVII</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,8 +11,9 @@
 </head>
 <body id="monApp">
     <div class="top">
-        <h1>FFXV</h1>
+        <img src="./images/Daco_2729743.png" alt="">
     </div>
+    <div class="container">
     <div class="mechant">
         <h4>Méchant</h4>
         <div class="pv" v-model="pvIa">
@@ -23,28 +24,43 @@
         </div>
     </div>
     <div class="player">
-        <h4>Joueur</h4>
+        <!-- <img class="cloudGif" src="./images/cloud.gif" alt=""> -->
+        <h4>Cloud</h4>
         <div class="pv" v-model="pvPlayer">
             {{pvPlayer}}
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
         </div>
+        <div class="ff7">
+            <ul>
+            <h1>Combat :</h1>
+            <li v-for="element in combatResponse">
+                {{element}}
+            </li>
+            </ul>
+          </div>
+        </div>
+
         <div class="button">
-            <button @click="attackPlayer()" class="btn btn-primary">
+            <button @click="attackPlayer()">
                 Attaque
             </button>
-            <button @click="attackSpecial()":disabled="test" class="btn btn-primary">
+            <button @click="attackSpecial()":disabled="test">
                 Attaque Spé
             </button>
-            <button class="btn btn-primary">
+        </div>
+        <div class="button">
+            <button>
                 Heal
             </button>
-            <button class="btn btn-primary">
+            <button>
                 Fuir
             </button>
         </div>
+
+        
     <!-- script pour contacter VUE -->
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>
