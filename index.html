@@ -15,13 +15,13 @@
     </div>
     <div>
         <h4>Méchant</h4>
-        <div class="pv" v-model="pvIa">
+        <div class="pv">
             {{pvIa}}
         </div>
     </div>
     <div>
         <h4>Joueur</h4>
-        <div class="pv" v-model="pvPlayer">
+        <div class="pv">
             {{pvPlayer}}
         </div>
         <div class="button">
@@ -31,7 +31,7 @@
             <button class="btn btn-primary">
                 Attaque Spé
             </button>
-            <button class="btn btn-primary">
+            <button v-on:click="heal()" class="btn btn-primary">
                 Heal
             </button>
             <button class="btn btn-primary">
