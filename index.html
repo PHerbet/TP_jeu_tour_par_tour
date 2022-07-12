@@ -34,9 +34,21 @@
             <button class="btn btn-primary">
                 Heal
             </button>
-            <button class="btn btn-primary">
+            <button class="btn btn-primary" @click="flee(1)">
                 Fuir
             </button>
+        </div>
+        <div :class="{ run: fuite}">
+            <p> Veux tu fuir ?</p>
+            <button class="btn btn-primary" @click="flee(2)">
+                oui, je suis une fiotte!
+            </button>
+            <button class="btn btn-primary" @click="flee(1)">
+                non, je suis badass!
+            </button>
+        </div>
+        <div>
+            <img src="./img/game_over.webp" :class="{ died: game_over}"alt="">
         </div>
     </div>
     <!-- script pour contacter VUE -->
