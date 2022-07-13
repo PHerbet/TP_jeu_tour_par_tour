@@ -17,6 +17,7 @@ const app = Vue.createApp({
             combat:'',
             combatResponse: [],
             victory: true,
+            sound: new Audio ("./images/victory.ogg"),
         };
     },
     
@@ -140,9 +141,12 @@ const app = Vue.createApp({
             }
         if (x === 2){
             this.game_over = false;
+
+
         }
-        }
-    },
+    }
+        },
+
     computed:{
         
         },
@@ -157,6 +161,7 @@ const app = Vue.createApp({
             if (value <= 0 && this.pvPlayer > 0) {
                 this.victory = false;
                 this.pvIa = 0;
+                this.sound.play();
             }
         },
         pvPlayer(value){
