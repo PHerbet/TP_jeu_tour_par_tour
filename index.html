@@ -10,54 +10,67 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="monApp">
+
     <div class="top">
         <img src="./images/Daco_2729743.png" alt="">
     </div>
-    <div class="container">
+
+    <div class="englobe">
+    <div class="ff7">
+        <ul>
+        <h1>Combat :</h1>
+        <li v-for="element in combatResponse">
+            {{element}}
+        </li>
+        </ul>
+    </div>
+
+    <div class="containerBarret">
     <div class="mechant">
-        <h4>Méchant</h4>
+        <img class="cloudImg" src="./images/ff7-barret2.jpg" alt="">
+        <h4>Barret Wallace</h4>
         <div class="pv" v-model="pvIa">
             {{pvIa}}
                 <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
         </div>
     </div>
-    <div class="player">
-        <!-- <img class="cloudGif" src="./images/cloud.gif" alt=""> -->
-        <h4>Cloud</h4>
-        <div class="pv" v-model="pvPlayer">
-            {{pvPlayer}}
-            <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-        </div>
-        <div class="ff7">
-            <ul>
-            <h1>Combat :</h1>
-            <li v-for="element in combatResponse">
-                {{element}}
-            </li>
-            </ul>
-          </div>
-        </div>
+</div>
+</div>
+    
+                <div class="englobe2">
+                <div class="containerCloud">
+                    <div class="player">
+                        <img class="cloudImg" src="./images/ff7-cloud2.jpg" alt="">
+                        <h4>Cloud</h4>
+                        <div class="pv" v-model="pvIa">
+                            {{pvIa}}
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="button">
-            <button @click="attackPlayer()">
-                Attaque
-            </button>
-            <button @click="attackSpecial()":disabled="test">
-                Attaque Spé
-            </button>
-        </div>
-        <div class="button">
-            <button>
-                Heal
-            </button>
-            <button>
-                Fuir
-            </button>
+                <div class="ff7">
+                <div class="button">
+                    <button @click="attackPlayer()">
+                        Attaque
+                    </button>
+                    <button @click="attackSpecial()":disabled="test">
+                        Attaque Spé
+                    </button>
+                </div>
+                <div class="button">
+                    <button>
+                        Heal
+                    </button>
+                    <button>
+                        Fuir
+                    </button>
+                </div>
+            </div>
         </div>
 
         
