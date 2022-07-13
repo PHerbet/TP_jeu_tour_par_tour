@@ -1,6 +1,11 @@
+
+const a = document.querySelector('.cloudImg');
 const app = Vue.createApp({
     data() {
         return {
+            
+            hit: false,
+            heal1: false,
             pvPlayer : 100,
             pvIa : 100,
             tour : 0,
@@ -11,7 +16,6 @@ const app = Vue.createApp({
             test:false,
             combat:'',
             combatResponse: [],
-            width: 0,
             victory: true,
         };
     },
@@ -39,6 +43,9 @@ const app = Vue.createApp({
             this.combat = `l'IA vient de vous enlever ${random} PV`;
             this.combatResponse.push(this.combat);
              // ataque IA
+             //////////anmiation IA     
+             this.hit = !this.hit;
+            //anmiation IA ///////
 
             // incrementation tour 
             if (this.tour === 3) {
@@ -47,7 +54,10 @@ const app = Vue.createApp({
                 this.tour++;  
                 console.log(`tour = ${this.tour}`);
             }
-            // incrementation tour 
+            // incrementation tour /////////
+
+
+
         },
 
         attackSpecial(){
@@ -78,6 +88,10 @@ const app = Vue.createApp({
             this.combatResponse.push(this.combat);
             //gestion des messages de combat
 
+            //////////anmiation IA     
+            this.hit = !this.hit;
+            //anmiation IA ///////
+
 
 
             this.test = !this.test;
@@ -86,6 +100,7 @@ const app = Vue.createApp({
             },
 
     heal() {
+
             if(this.pvPlayer > 0 && this.pvPlayer < 100){
                 this.pvPlayer = this.pvPlayer +20;
                 this.tour = this.tour +1;
@@ -95,7 +110,11 @@ const app = Vue.createApp({
             if(this.pvPlayer > 100){
                 this.pvPlayer=100;
             }
-           
+                      //gestion des messages de combat
+            if (this.combatResponse.length > 2) {
+                this.combatResponse = [];
+            }
+            //gestion des messages de combat
 
             //gestion des messages de combat
             this.combat = `vous avez maintenant ${this.pvPlayer}pv`;
@@ -111,6 +130,9 @@ const app = Vue.createApp({
             this.combat = `l'IA vient de vous enlever ${random}`;
             this.combatResponse.push(this.combat);
            //gestion des messages de combat
+                       //////////anmiation IA     
+                       this.heal1 = !this.heal1;
+                       //anmiation IA ///////
         },
         flee(x) {
             if (x === 1) {
