@@ -16,7 +16,7 @@
     <div class="container">
     <div class="mechant">
         <h4>Méchant</h4>
-        <div class="pv" v-model="pvIa">
+        <div class="pv">
             {{pvIa}}
                 <div class="progress">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -50,9 +50,7 @@
             <button @click="attackSpecial()":disabled="test">
                 Attaque Spé
             </button>
-        </div>
-        <div class="button">
-            <button>
+            <button v-on:click="heal()" class="btn btn-primary">
                 Heal
             </button>
             <button class="btn btn-primary" @click="flee(1)">

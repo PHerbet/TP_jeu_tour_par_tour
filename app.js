@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
-            pvPlayer : 100,
+            pvPlayer : 50,
             pvIa : 100,
             tour : 0,
             atk : 0,
@@ -25,8 +25,22 @@ const app = Vue.createApp({
             this.game_over = false;
         }
         },
-        attackPlayer(){
 
+    heal() {
+            if(this.pvPlayer > 0 && this.pvPlayer < 100){
+                this.pvPlayer = this.pvPlayer +20;
+                this.tour = this.tour +1;
+            }
+            
+            if(this.pvPlayer > 100){
+                this.pvPlayer=100;
+            }
+            console.log("+20 de pv pour le Player");
+        }
+    },
+    computed:{
+        
+    attackPlayer(){
             if (this.combatResponse.length > 2) {
                 this.combatResponse = [];
             }
