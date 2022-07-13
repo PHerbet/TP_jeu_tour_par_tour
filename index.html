@@ -58,7 +58,7 @@
                     <button @click="attackPlayer()">
                         Attaque
                     </button>
-                    <button @click="attackSpecial()":disabled="test">
+                    <button @click="attackSpecial()":disabled="test" id="relou">
                         Attaque Spé
                     </button>
                 </div>
@@ -85,7 +85,6 @@
         </div>
         <div :class="{ died: game_over}"alt="" id ="fuite">
             <h2>Défaite! </h2>
-        </div>
     </div>
     <div id="victoire" :class="{ victoire: victory}">
         <h2>Victoire !</h2>
