@@ -7,6 +7,8 @@ const app = Vue.createApp({
             atk : 0,
             fuite: true,
             game_over: true,
+            atta : true,
+            isActive: true,
         };
     },
     methods: {
@@ -21,6 +23,10 @@ const app = Vue.createApp({
     },
     computed: {
 
+    },
+    watch: {
+        isActive(){
+        }
     }
     });
     app.mount('#monApp');
