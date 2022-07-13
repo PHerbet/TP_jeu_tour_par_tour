@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
-            pvPlayer : 50,
+            pvPlayer : 100,
             pvIa : 100,
             tour : 0,
             atk : 0,
