@@ -68,9 +68,12 @@
                 </button>
             </div>
         </div>
-        <div>
-            <img src="./images/game_over.png" :class="{ died: game_over}"alt="" id ="fuite">
+        <div :class="{ died: game_over}"alt="" id ="fuite">
+            <h2>Défaite! </h2>
         </div>
+    </div>
+    <div id="victoire" :class="{ victoire: victory}">
+        <h2>Victoire !</h2>
     </div>
     <!-- script pour contacter VUE -->
     <script src="https://unpkg.com/vue@next"></script>

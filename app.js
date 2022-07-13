@@ -11,7 +11,8 @@ const app = Vue.createApp({
             test:false,
             combat:'',
             combatResponse: [],
-            width: 0
+            width: 0,
+            victory: true,
         };
     },
     
@@ -132,13 +133,13 @@ const app = Vue.createApp({
         },
         pvIa(value){
             if (value <= 0 && this.pvPlayer > 0) {
-                alert('tu as gagné');
+                this.victory = false;
                 this.pvIa = 0;
             }
         },
         pvPlayer(value){
             if (value <= 0) {
-                alert('tu as perdu');
+                this.game_over= false;
                 this.pvPlayer = 0;
             }
         },
