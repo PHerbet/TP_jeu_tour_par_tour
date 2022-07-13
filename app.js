@@ -39,8 +39,7 @@ const app = Vue.createApp({
             this.combat = `vous regagnez 20 pv`;
         }
     },
-    computed:{
-        
+
     attackPlayer(){
             if (this.combatResponse.length > 2) {
                 this.combatResponse = [];
@@ -81,9 +80,9 @@ const app = Vue.createApp({
             this.test = !this.test;
             this.tour = 0;
             // console.log(this.test);
-            }
-        },
-    
+            },
+        
+
     watch: {
         tour(value){
             if(value === 3){
