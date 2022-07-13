@@ -30,12 +30,13 @@ const app = Vue.createApp({
             if(this.pvPlayer > 0 && this.pvPlayer < 100){
                 this.pvPlayer = this.pvPlayer +20;
                 this.tour = this.tour +1;
+                console.log(this.tour);
             }
             
             if(this.pvPlayer > 100){
                 this.pvPlayer=100;
             }
-            console.log("+20 de pv pour le Player");
+            this.combat = `vous regagnez 20 pv`;
         }
     },
     computed:{
@@ -47,8 +48,8 @@ const app = Vue.createApp({
 
             this.atk = 10;
             this.pvIa -= this.atk;
-            // console.log(`l'attaque vient d'enlever ${this.atk} PV à l'énemie`);
-            this.combat = `l'attaque vient d'enlever ${this.atk} PV à l'énemie`;
+            // console.log(`l'attaque vient d'enlever ${this.atk} PV à l'énnemi`);
+            this.combat = `l'attaque vient d'enlever ${this.atk} PV à l'énnemi`;
             this.combatResponse.push(this.combat);
 
             random = Math.floor(Math.random()*(20-10)+10);
@@ -64,7 +65,7 @@ const app = Vue.createApp({
                 
             } else {
                 this.tour++;  
-                // console.log(`tour = ${this.tour}`);
+                console.log(`tour = ${this.tour}`);
             }
         },
 

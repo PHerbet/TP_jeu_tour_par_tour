@@ -57,17 +57,19 @@
                 Fuir
             </button>
         </div>
-        <div :class="{ run: fuite}">
-            <p> Veux tu fuir ?</p>
-            <button class="btn btn-primary" @click="flee(2)">
-                oui, je suis une fiotte!
-            </button>
-            <button class="btn btn-primary" @click="flee(1)">
-                non, je suis badass!
-            </button>
+        <div :class="{ run: fuite}" id="fuite">
+            <p> Prendre la fuite ?</p>
+            <div class="button">
+                <button class="btn btn-primary" @click="flee(2)">
+                    oui
+                </button>
+                <button class="btn btn-primary" @click="flee(1)">
+                    non
+                </button>
+            </div>
         </div>
-        <div>
-            <img src="./images/game_over.webp" :class="{ died: game_over}"alt="">
+        <div id="fuite">
+            <img src="./images/game_over.png" :class="{ died: game_over}"alt="">
         </div>
     </div>
     <!-- script pour contacter VUE -->
