@@ -46,8 +46,8 @@ const app = Vue.createApp({
 
             this.atk = 10;
             this.pvIa -= this.atk;
-            // console.log(`l'attaque vient d'enlever ${this.atk} PV à l'énnemi`);
-            this.combat = `l'attaque vient d'enlever ${this.atk} PV à l'énnemi`;
+            // console.log(`l'attaque vient d'enlever ${this.atk} PV à l'ennemi`);
+            this.combat = `l'attaque vient d'enlever ${this.atk} PV à l'ennemi`;
             this.combatResponse.push(this.combat);
 
             random = Math.floor(Math.random()*(20-10)+10);
@@ -67,6 +67,7 @@ const app = Vue.createApp({
             }
         },
 
+
         attackSpecial(){
             this.atk = 20;
             this.pvIa -= this.atk;
@@ -80,7 +81,9 @@ const app = Vue.createApp({
             this.tour = 0;
             // console.log(this.test);
             },
-        
+        computed: {
+
+        },
 
     watch: {
         tour(value){

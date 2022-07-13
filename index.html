@@ -50,10 +50,10 @@
             <button @click="attackSpecial()":disabled="test">
                 Attaque Spé
             </button>
-            <button v-on:click="heal()" class="btn btn-primary">
+            <button v-on:click="heal()" >
                 Heal
             </button>
-            <button class="btn btn-primary" @click="flee(1)">
+            <button @click="flee(1)">
                 Fuir
             </button>
         </div>
@@ -68,8 +68,8 @@
                 </button>
             </div>
         </div>
-        <div id="fuite">
-            <img src="./images/game_over.png" :class="{ died: game_over}"alt="">
+        <div>
+            <img src="./images/game_over.png" :class="{ died: game_over}"alt="" id ="fuite">
         </div>
     </div>
     <!-- script pour contacter VUE -->
